@@ -96,7 +96,8 @@ def calcul(exp):
     iplus = 0 
     ifois = 0 
     pc = 0 
-    while i < n and not plus: 
+    
+    while i < n and not plus: # while i < n and not ope: # pour la partie 1 
         if pc == 0: 
             if exp[i] == '+': 
                 plus = True 
@@ -110,10 +111,10 @@ def calcul(exp):
         if exp[i] == ')': 
             pc -= 1 
         i += 1 
+        # ope = plus or fois # pour la partie 1 
     ope = plus or fois 
     
     if not ope: 
-        # print('yop', exp)
         return int(exp) 
     
     else: 
